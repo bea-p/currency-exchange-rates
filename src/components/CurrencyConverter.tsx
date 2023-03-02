@@ -56,7 +56,11 @@ const CurrencyConverter: React.FC<Props> = (props: Props) => {
         <div>
           <label htmlFor="amount">CZK</label>
           <Input
-            {...register("amount", { required: true, min: 0 })}
+            type="number"
+            {...register("amount", {
+              required: true,
+              min: 0,
+            })}
             aria-invalid={errors.amount ? "true" : "false"}
           />
         </div>

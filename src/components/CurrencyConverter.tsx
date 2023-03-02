@@ -10,7 +10,7 @@ import {
   Input,
   Error,
 } from "../styles/CurrencyConverter";
-import convertFromCZK from "../utils/helpers";
+import convertFromCZK from "../utils/helpers/convertFromCZK";
 
 interface Props {
   currencies: Currency[];
@@ -42,7 +42,7 @@ const CurrencyConverter: React.FC<Props> = (props: Props) => {
   if (amountCZK && amountConverted && currency) {
     formResult = (
       <FormResult>
-        {amountCZK} CZK = {amountConverted?.toFixed(2)} {currency ?? "USD"}
+        {amountCZK} CZK = {amountConverted?.toFixed(2)} {currency}
       </FormResult>
     );
   }
